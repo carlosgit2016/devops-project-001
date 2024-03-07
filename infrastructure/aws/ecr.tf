@@ -8,9 +8,3 @@ resource "aws_ecr_repository" "app" {
   }
 
 }
-
-resource "aws_iam_policy_attachment" "example-AmazonECRRead" {
-  name       = "ecr-readonly-attachment"
-  policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
-  roles      = [aws_iam_role.example.name]
-}
